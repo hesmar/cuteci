@@ -34,6 +34,12 @@ Controller.prototype.IntroductionPageCallback = function() {
     gui.clickButton(buttons.NextButton);
 }
 
+Controller.prototype.DynamicTelemetryPluginFormCallback = function() {
+        gui.pageWidgetByObjectName("DynamicTelemetryPluginForm").statisticGroupBox.disableStatisticRadioButton.setChecked(true);
+        gui.clickButton(buttons.NextButton);
+}
+
+
 Controller.prototype.TargetDirectoryPageCallback = function() {
     console.log("Target Directory Page");
     var installDir = installer.environmentVariable("DESTDIR");

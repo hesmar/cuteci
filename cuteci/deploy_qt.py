@@ -54,6 +54,8 @@ def _get_version(path):
 
 
 def _get_major_minor_ver(path):
+    if os.path.basename(path).startswith("qt-unified"):
+        return "unified"
     return ".".join(_get_version(path).split(".")[:1])
 
 
